@@ -2,5 +2,7 @@
 WARP Endpoint IP one-click optimization script
 
 ```bash
+opkg update
+opkg install bash
 bash <(curl -fsSL https://raw.githubusercontent.com/TheyCallMeSecond/WARP-Endpoint-IP/main/ip.sh)
 ```

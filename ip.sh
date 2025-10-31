@@ -55,6 +55,41 @@ endpoint4() {
 	n=0
 	iplist=100
 	while true; do
+		temp[$n]=$(echo 8.47.69.$(($RANDOM % 256)))
+		n=$(($n + 1))
+		if [ $n -ge $iplist ]; then
+			break
+		fi
+		temp[$n]=$(echo 8.39.125.$(($RANDOM % 256)))
+		n=$(($n + 1))
+		if [ $n -ge $iplist ]; then
+			break
+		fi
+		temp[$n]=$(echo 8.35.211.$(($RANDOM % 256)))
+		n=$(($n + 1))
+		if [ $n -ge $iplist ]; then
+			break
+		fi
+		temp[$n]=$(echo 8.6.112.$(($RANDOM % 256)))
+		n=$(($n + 1))
+		if [ $n -ge $iplist ]; then
+			break
+		fi
+		temp[$n]=$(echo 8.39.204.$(($RANDOM % 256)))
+		n=$(($n + 1))
+		if [ $n -ge $iplist ]; then
+			break
+		fi
+		temp[$n]=$(echo 8.39.214.$(($RANDOM % 256)))
+		n=$(($n + 1))
+		if [ $n -ge $iplist ]; then
+			break
+		fi
+		temp[$n]=$(echo 8.34.146.$(($RANDOM % 256)))
+		n=$(($n + 1))
+		if [ $n -ge $iplist ]; then
+			break
+		fi
 		temp[$n]=$(echo 162.159.192.$(($RANDOM % 256)))
 		n=$(($n + 1))
 		if [ $n -ge $iplist ]; then
@@ -97,6 +132,48 @@ endpoint4() {
 		fi
 	done
 	while true; do
+		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]; then
+			break
+		else
+			temp[$n]=$(echo 8.34.146.$(($RANDOM % 256)))
+			n=$(($n + 1))
+		fi
+		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]; then
+			break
+		else
+			temp[$n]=$(echo 8.39.214.$(($RANDOM % 256)))
+			n=$(($n + 1))
+		fi
+		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]; then
+			break
+		else
+			temp[$n]=$(echo 8.39.204.$(($RANDOM % 256)))
+			n=$(($n + 1))
+		fi
+		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]; then
+			break
+		else
+			temp[$n]=$(echo 8.6.112.$(($RANDOM % 256)))
+			n=$(($n + 1))
+		fi
+		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]; then
+			break
+		else
+			temp[$n]=$(echo 8.35.211.$(($RANDOM % 256)))
+			n=$(($n + 1))
+		fi
+		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]; then
+			break
+		else
+			temp[$n]=$(echo 8.39.125.$(($RANDOM % 256)))
+			n=$(($n + 1))
+		fi
+		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]; then
+			break
+		else
+			temp[$n]=$(echo 8.47.69.$(($RANDOM % 256)))
+			n=$(($n + 1))
+		fi
 		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]; then
 			break
 		else
